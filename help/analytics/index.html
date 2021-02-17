@@ -100,7 +100,7 @@ popular.</p>
 <p>The first time you install XML Notepad on your computer you will be prompted with the following
 dialog:</p>
 <p><img alt="popup" src="../../assets/images/analytics.png" /></p>
-<p>If user clicks <code>No</code> then the choice will be written to the XML Notepad settings file and it will not
+<p>If you click <code>No</code> then the choice will be written to the XML Notepad settings file and it will not
 be prompted again. Analytics can be enabled or disabled any time using the <code>Allow analytics</code> option
 in the <a href="../options/">Options dialog</a>.</p>
 <p>If you want to disable analytics before installing XML Notepad (perhaps in an enterprise wide
@@ -109,14 +109,13 @@ distribution) then you can create this file before running the installer:</p>
 </code></pre>
 <p>containing the following:</p>
 <pre><code class="language-xml">&lt;Settings&gt;
-  &lt;AnalyticsClientId&gt;12bd06be-3916-4698-a41b-b3ad92ae6402&lt;/AnalyticsClientId&gt;
+  &lt;AnalyticsClientId&gt;disabled&lt;/AnalyticsClientId&gt;
   &lt;AllowAnalytics&gt;False&lt;/AllowAnalytics&gt;
 &lt;/Settings&gt;
 </code></pre>
-<p>This will disable analytics and avoid the first time prompt.  It doesn't matter what GUID you
-provide for <code>AnalyticsClientId</code>.  You could use this one or invent another one, it doesn't matter
-because there won't be any analytics collected unless the user changes the setting in the the <a href="../options/">Options
-dialog</a>.</p>
+<p>This will disable analytics and avoid the first time prompt. The <code>disabled</code> option here for
+<code>AnalyticsClientId</code> causes the <code>Analytics</code> option in the Options Dialog to be hidden so the user
+cannot enable analytics later.</p>
 
     <br>
       
