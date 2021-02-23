@@ -134,12 +134,11 @@ resulting <code>BuildTasks\bin\Debug\XmlNotepadBuildTasks.dll</code> to <code>Bu
 XmlNotepad.sln. This is done this way because Visual Studio will lock this file after doing a build, so you wouldn't be
 able to compile the new version.</p>
 <h3 id="publish-the-clickonce-installer">Publish the ClickOnce installer<a class="headerlink" href="#publish-the-clickonce-installer" title="Permanent link">#</a></h3>
-<p>Open the <code>Application</code> project properties and you will see a Publish option there which is currently configured to 
-upload the installer using FTP to the <code>ftp://lovettsoftware.com/lovettsoftware.com/Downloads/XmlNotepad/</code> location.
+<p>Open the <code>Application</code> project properties and you will see a Publish option there.
 This is only something that can be done by the current author.  This setup is also only performed on strongly
 signed bits using a certificate belonging to the author.  This certificate is specified using environment variable
 <code>MYKEYFILE</code>, but you can build, debug and test XML Notepad without this environment variable set.</p>
-<p>This setup provides the ClickOnce installed version of XML Notepad installable from <a href="http://lovettsoftware.com/downloads/xmlnotepad/XmlNotepad.application">lovettsoftware</a>.  This is the most convenient installer since it is
+<p>This setup provides the ClickOnce installed version of XML Notepad installable from <a href="https://lovettsoftwarestorage.blob.core.windows.net/downloads/XmlNotepad/XmlNotepad.application">lovettsoftware</a>.  This is the most convenient installer since it is
 a single click and also provide auto-updating whenever a new version is published.</p>
 <h3 id="build-the-setup-msi-installer">Build the setup .msi installer<a class="headerlink" href="#build-the-setup-msi-installer" title="Permanent link">#</a></h3>
 <p>XML Notepad uses the <a href="https://wixtoolset.org/">WIX Toolset</a> to build a standalone windows .msi installer. To build that
